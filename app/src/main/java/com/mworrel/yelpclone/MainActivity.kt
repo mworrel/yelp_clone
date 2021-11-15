@@ -51,6 +51,11 @@ class MainActivity : AppCompatActivity() {
 
             override fun onFailure(call: Call<YelpSearchResult>, t: Throwable) {
                 Log.i(TAG, "onFailure $t");
+                Toast.makeText(
+                    applicationContext,
+                    "Internet is not available",
+                    Toast.LENGTH_SHORT
+                ).show()
             }
 
         })
